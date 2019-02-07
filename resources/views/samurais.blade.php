@@ -23,7 +23,7 @@
               <th>Posto</th>
               <th>Arma</th>
               <th>Missoes Completas</th>
-              <!-- <th>Deletado em</th> -->
+              <th>Deletado em</th>
               <th></th>
             </tr>
           </thead>
@@ -40,7 +40,7 @@
                   <td>{{$samurai->posto}}</td>
                   <td>{{$samurai->arma}}</td>
                   <td>{{$samurai->missoes}}</td>
-                  <!-- <td>{{$samurai->deleted_at}}</td> -->
+                  <td>{{$samurai->deleted_at}}</td>
                   <td class="col-xs-2">
 
                       <form class="col-xs-12" action="{{action('SamuraiController@destroySamurai', ['id' => $samurai->id])}}" method="POST">

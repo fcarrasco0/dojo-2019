@@ -16,7 +16,7 @@ class SamuraiController extends Controller
     {
         Samurai::destroy(2);
         $samurais = Samurai::all();
-        //$samurais = Samurai::withTrashed()->get();
+        $samurais = Samurai::withTrashed()->get();
 
         return view('samurais', ['samurais' => $samurais]);
     }
@@ -28,6 +28,7 @@ class SamuraiController extends Controller
      */
     public function createSamurai()
     {
+        
         return back();
     }
 
@@ -39,7 +40,10 @@ class SamuraiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $novo_samurai = new Samurai;
+        $novo_samurai->insereSamurai($request);
+
+        return $novo_samurai;
     }
 
     /**
@@ -84,6 +88,7 @@ class SamuraiController extends Controller
      */
     public function destroySamurai($id)
     {
+        Samurai::destroy($id);
         return back();
     }
 }

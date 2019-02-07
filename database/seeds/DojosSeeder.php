@@ -13,7 +13,7 @@ class DojosSeeder extends Seeder
     {
         $dojo = [
             'nome' => 'EJCM',
-            'sensei_id' => 1,
+            // 'sensei_id' => 1,
             'alunos_atuais' => 16,
             'alunos_formados' => 87,
             'alunos_reprovados' => 9,

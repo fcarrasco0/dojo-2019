@@ -18,7 +18,7 @@ class CreateSamuraisTable extends Migration
             $table->string('nome');
             $table->integer('idade')->unsigned()->default(17);
             $table->string('nome_dojo')->nullable();
-            $table->string('posto')->mullable();
+            $table->string('posto')->nullable();
             $table->string('arma')->nullable();
             $table->integer('missoes')->unsigned()->default(0);
             $table->softDeletes();
